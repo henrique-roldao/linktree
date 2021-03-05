@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+    --main-color: #6C63FF;
+    --bg: #202026;
+    --text-color: #F8F7FF;
+}
+
 
 * {
     padding: 0;
@@ -16,7 +22,7 @@ body {
     width: 100%;
     height: 100vh;
 
-    background-color: #202026;
+    background-color: var(--bg);
 }
 
 header img {
@@ -31,7 +37,7 @@ h2 {
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.15em;
-    color: #F8F7FF;
+    color: var(--text-color);
 }
 
 p {
@@ -40,17 +46,21 @@ p {
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.15em;
-    color: #F8F7FF;
+    color: var(--text-color);
 }
 
 b {
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 svg {
     width: 20px;
     height: 20px;
     margin-right: 8px;
+}
+
+a svg.icons-btn {
+    fill: var(--text-color);
 }
 
 .btn {
@@ -64,7 +74,7 @@ svg {
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.15em;
-    color: #F8F7FF;
+    color: var(--text-color);
 
     width: 200px;
 
@@ -73,7 +83,7 @@ svg {
 
     overflow: hidden;
 
-    border: 2px solid #6C63FF;
+    border: 2px solid var(--text-color);
 
     position: relative;
 
@@ -87,7 +97,7 @@ svg {
         width: 100%;
         height: 100%;
 
-        background-color: #6C63FF;
+        background-color: var(--main-color);
         z-index: -1;
 
         transition: .7s ease;
@@ -106,4 +116,64 @@ svg {
             height: 450%;
         }
     }
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: var(--text-color);
+    float: right;
+    border-radius: 100px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 20px;
+        height: 20px;
+        background-color: var(--main-color);
+        border-radius: 90px;
+        transition: 0.3s;
+    }
+}
+
+input:checked + label {
+    background-color: var(--text-color);
+}
+
+input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
+
+svg.icon-mode {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color);
+}
+
+svg.icon-mode-2 {
+    margin-left: 8px;
 }
