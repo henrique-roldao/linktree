@@ -53,13 +53,13 @@ b {
     color: var(--main-color);
 }
 
-svg {
+svg, img {
     width: 20px;
     height: 20px;
     margin-right: 8px;
 }
 
-a svg.icons-btn {
+a svg.icons-btn, a svg.icons-btn {
     fill: var(--text-color);
 }
 

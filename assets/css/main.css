@@ -8,25 +8,15 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background-color: var(--bg);
@@ -60,28 +50,22 @@ b {
   color: var(--main-color);
 }
 
-svg {
+svg, img {
   width: 20px;
   height: 20px;
   margin-right: 8px;
 }
 
-a svg.icons-btn {
+a svg.icons-btn, a svg.icons-btn {
   fill: var(--text-color);
 }
 
 .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: bold;
   text-align: center;
@@ -94,43 +78,32 @@ a svg.icons-btn {
   border: 2px solid var(--text-color);
   position: relative;
 }
-
 .btn:before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   background-color: var(--main-color);
   z-index: -1;
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
+  transition: 0.7s ease;
 }
 
 .btn-animation:before {
   width: 110%;
   height: 0;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
-
 .btn-animation:hover:before {
   height: 450%;
 }
 
 .toggle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-top: 10px;
 }
 
@@ -150,9 +123,8 @@ label {
   border-radius: 100px;
   position: relative;
 }
-
 label::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 3px;
@@ -160,7 +132,6 @@ label::after {
   height: 20px;
   background-color: var(--main-color);
   border-radius: 90px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -170,8 +141,7 @@ input:checked + label {
 
 input:checked + label::after {
   left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 label:active:after {
@@ -186,5 +156,4 @@ svg.icon-mode {
 
 svg.icon-mode-2 {
   margin-left: 8px;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
