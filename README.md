@@ -1,2 +1,6 @@
 # linktree
-Meu Linktree Henrique
+
+Linktree pessoal feito em HTML, SCSS, JavaScript
+
+# Updates coming soon
+
